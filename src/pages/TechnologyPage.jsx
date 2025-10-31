@@ -1,9 +1,9 @@
 function TechnologyPage() {
-  return (
-    <div>
-      <h1>TechnologyPage</h1>
-    </div>
-  );
+	return (
+		<div>
+			<h1>Technology Details</h1>
+		</div>
+	)
 }
 
-export default TechnologyPage;
+export default TechnologyPage

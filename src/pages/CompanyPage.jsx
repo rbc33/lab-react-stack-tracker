@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 function CompanyPage({ companies }) {
 	const { companySlug } = useParams()
 	const company = companies.find((c) => c.slug === companySlug)
-	console.log(company)
 	return (
 		<div>
 			<h1>Company Profile</h1>
@@ -20,7 +19,7 @@ function CompanyPage({ companies }) {
 			<div className="stack">
 				{company.techStack.map((st) => (
 					<li key={st.slug}>
-						<Link to={`/tech/${st.slug}`}>
+						<Link to={`/tech/${st.slug}?company=${company.slug}`}>
 							<img src={st.image} height="50" />
 							<p>{st.name}</p>
 						</Link>
